@@ -113,7 +113,5 @@ function showScore() {
 }
 
 
-
-
 // This button starts the quiz!
 startQuizButton.addEventListener("click",startQuiz);
