@@ -1,8 +1,22 @@
+:root{
+    background-color: rgb(224, 227, 253);
+    }
+    
     li{
         padding-bottom: 3px;
-        color: white;
+        color: rgb(255, 255, 255);
         text-shadow: 1.5px 1px 3px black;
         list-style-type: none;
+    }
+
+.container {
+    width: 120vw;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40px;
+    margin: 0 auto;
     }
     
     p{
@@ -21,15 +35,7 @@
         text-align: center;
     }
     
-    .container {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 80rem;
-        margin: 0 auto;
-    }
+
     
     button {
         display: inline-block;
@@ -41,7 +47,7 @@
         text-align: center;
         font-size: 15px;
         padding: 20px;
-        width: 200px;
+        width: 180px;
         margin-top: 3px;
     }
     
@@ -78,12 +84,12 @@
         align-items: center;
     }
     
-    #highScore{
+    #highscore{
         height: 1.5rem;
         border: groove 2px;
     }
     
-    #high-scorePage{
+    #highscore-page{
         display: none;
         width: 50%;
         border: solid;
@@ -102,7 +108,7 @@
         color: #eeeeee;
         font-family: sans-serif;
     }
-    #highscoreContainer{
+    #highscore-container{
         height: 100%;
         width: 100%;
         display: none;
@@ -118,7 +124,7 @@
     
     #highscore-initials{
         display: inline-block;
-        padding-left: 9.5rem;
+        padding-left: 20px;
         font-family: sans-serif;
         font-weight: bold;
     }
@@ -130,13 +136,13 @@
         font-weight: bold;
     }
     
-    #finalScore{
+    #finalscore{
         padding-bottom: 0.5rem;
         font-size: x-large;
         font-family: sans-serif;
         font-weight: bold;
     }
     
-    #endGameBtns{
+    #endgameBtns{
         display: none;
     }
