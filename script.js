@@ -53,7 +53,7 @@ var quizQuestions = [{
     correctAnswer: "d"
 },
 {
-    question: "Which HTML attribute is used to deÚne inline styles?",
+    question: "Which HTML attribute is used to define inline styles?",
     choiceA: "font",
     choiceB: "class",
     choiceC: "styles",
@@ -71,11 +71,11 @@ var score = 0;
 var correct;
 
 // This function cycles through the object array containing the quiz questions to generate the questions and answers.
-function generateQuizQuestion() {
+function generateQuizQuestion(){
     gameoverDiv.style.display = "none";
-    if (currentQuestionIndex === finalQuestionIndex) {
+    if (currentQuestionIndex === finalQuestionIndex){
         return showScore();
-    }
+    } 
     var currentQuestion = quizQuestions[currentQuestionIndex];
     questionsEl.innerHTML = "<p>" + currentQuestion.question + "</p>";
     buttonA.innerHTML = currentQuestion.choiceA;
@@ -85,31 +85,30 @@ function generateQuizQuestion() {
 };
 
 // Start Quiz function starts the TimeRanges, hides the start button, and displays the first quiz question.
-function startQuiz() {
+function startQuiz(){
     gameoverDiv.style.display = "none";
     startQuizDiv.style.display = "none";
     generateQuizQuestion();
 
     //Timer
-    timerInterval = setInterval(function () {
+    timerInterval = setInterval(function() {
         timeLeft--;
         quizTimer.textContent = "Time left: " + timeLeft;
-
-        if (timeLeft === 0) {
-            clearInterval(timerInterval);
-            showScore();
+    
+    if(timeLeft === 0) {
+        clearInterval(timerInterval);
+        showScore();
         }
     }, 1000);
     quizBody.style.display = "block";
 }
 // This function is the end page screen that displays your score after either completeing the quiz or upon timer run out
-function showScore() {
+function showScore(){
     quizBody.style.display = "none"
     gameoverDiv.style.display = "flex";
     clearInterval(timerInterval);
     highscoreInputName.value = "";
     finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestions.length + " correct!";
-
 }
 
 

@@ -11,37 +11,37 @@
         <div class="Container">
             <div id="startpage"> 
                 <h1>Test your knowledge in your journey of becoming a full stack developer...</h1>
-            <button id="startbtn">Start Game</button>
-            <button id="startpagehighscore" onclick="showHighscore()">High Score</button>
+            <button id="startbtn">Start Code Quiz</button>
+            <button id="startPageHighscore" onclick="showHighscore()">High Score</button>
             </div>
 
             <div id="Quiz">
                 <div id="timer">Time Left: </div>
-                <div id="Questions">Questions Placeholder</div>
-                    <button id="a" onclick="Answer('a')">A</button>
-                    <button id="b" onclick="Answer('b')">B</button>
-                    <button id="c" onclick="Answer('c')">C</button>
-                    <button id="d" onclick="Answer('d')">D</button>
-                <div id="Result"></div>
+                <div id="questions"><p>Questions Placeholder</p></div>
+                    <button id="a" onclick="checkAnswer('a')">A</button>
+                    <button id="b" onclick="checkAnswer('b')">B</button>
+                    <button id="c" onclick="checkAnswer('c')">C</button>
+                    <button id="d" onclick="checkAnswer('d')">D</button>
+                <div id="result"></div>
             </div>
             
-            <div id="GameOver">
-                <div id="YourScore"></div>
-                <input type="text" size = "60" placeholder="Player initials on High Score" name="initials" id="initials"/>
-                <button id="submityourscore">Submit Your Score</button>
+            <div id="gameover">
+                <div id="finalScore"></div>
+                <input type="text" size = "40" placeholder="Enter your initials for high score" name="initials" id="initials"/>
+                <button id="submitScore">Submit Score</button>
             </div>
-            <div id="HighScoreContainer">
-            <div id="HighScorePage"></div>
-                <div id="HighScoreHeader">
+            <div id="highscoreContainer">
+            <div id="high-scorePage"></div>
+                <div id="highscore-header">
                     <h2>User initials</h2>
                     <h3>Score</h3>
                 </div>
-                <div id="HighScoreInitials"></div>
-                <div id="HighScoreScore"></div>
+                <div id="highscore-initials"></div>
+                <div id="highscore-score"></div>
             </div>
-            <div id="EndGameBtns">
-                <button id="PlayAgain" onclick="Replay()">Replay</button>
-                <button id="ClearhighScore" onclick="ClearScore()">Clear High Score</button>
+            <div id="endGameBtns">
+                <button id="PlayAgain" onclick="replayQuiz()">Play Again</button>
+                <button id="clearHighscore" onclick="clearScore()">Clear Highscore</button>
             </div>
         </div>
         </div>
